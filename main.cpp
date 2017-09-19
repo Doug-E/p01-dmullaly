@@ -13,7 +13,9 @@ game:
 
 int ranE, ranM, ranH, guess;
 
-char play,e,m,h,y,diff;
+char play,diff;
+
+do {
 
 srand(time (NULL) );
 ranE = rand() % 2 + 1;
@@ -24,7 +26,7 @@ ranH = rand() % 100 +1;
 cout<< "What difficulty would you like to do? Easy(e), Medium(m), or Hard(h)?" <<endl;
 cin>> diff;
 
-if (diff == 'e') {
+if (diff == 'e' || diff == 'E') {
 cout<< "Guess a number between 1 and 2. You have 1 try!"<<ranE  <<endl;
 cin>> guess;
     if (guess == ranE) {
@@ -36,7 +38,7 @@ cin>> guess;
 
 }
     
-else if (diff == 'm')    {
+else if (diff == 'm' || diff == 'M')    {
 cout<< "Guess a number between 1 and 10. You have 2 tries!" <<ranM <<endl;
 cin>> guess;
     if (guess == ranM)  {
@@ -54,7 +56,7 @@ cin>> guess;
     }
 }
 
-else if (diff == 'h') {
+else if (diff == 'h' || diff == 'H') {
 cout<< "Guess a number between 1 and 100. You have 3 tries!" <<ranH <<endl;
 cin>> guess;
     if (guess == ranH)  {
@@ -79,15 +81,16 @@ cin>> guess;
         }
     }
 }
-cout<< "Would you like to play again? (y/n)" <<endl;
-cin>> play;
-if (play == y) {
-goto game;
+else {
+cout<< "That wasn't and option. ";
 }
 
-else {
-cout<< "Thanks for playing!" <<endl;
+cout<< "Would you like to play again? (y/n)" <<endl;
+cin>> play;
 }
+while (play == 'y' || play == 'Y');
+
+cout<< "Thanks for playing!" <<endl;
 
  return 0;
 
