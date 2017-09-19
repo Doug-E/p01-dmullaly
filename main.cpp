@@ -45,7 +45,10 @@ cin>> guess;
     cout<< "You guessed correctly! You win!" <<endl;
     }
     else {
-    cout<< "You were off by " << abs (ranM - guess) << "! One try left!" <<endl;
+    cout<< "The number is ";
+    if (guess > ranM) cout<< "lower";
+    else cout<< "higher";
+    cout<< "! One try left!" <<endl;
     cin>> guess;
         if (guess == ranM) {
         cout<< "You got it on your second try! You win!" <<endl;
@@ -63,13 +66,19 @@ cin>> guess;
     cout<< "You guessed correctly! You win!" <<endl;
     }
     else {
-    cout<< "You were off by " << abs (ranH - guess) << "! Two tries left!" <<endl;
+    cout<< "The number is ";
+    if (guess > ranH) cout<< "lower";
+    else cout<< "higher";
+    cout<< "! Two tries left!" <<endl;
     cin>> guess;
         if (guess == ranH) {
         cout<< "You got it on your second try! You win!" <<endl;
         }
         else    {
-            cout<< "You were off by " << abs (ranH - guess) << "! One try left!" <<endl;
+            cout<< "The number is ";
+            if (guess > ranH) cout<< "lower";
+            else cout<< "higher";
+            cout<< "! One try left!" <<endl;
             cin>> guess;
             if (guess == ranH) {
             cout<< "You got it on your last try! You win!" <<endl;
