@@ -9,8 +9,6 @@ using namespace std;
 int main()
 {
 
-game:
-
 int ranE, ranM, ranH, guess;
 
 char play,diff;
@@ -22,12 +20,11 @@ ranE = rand() % 2 + 1;
 ranM = rand() % 10 + 1;
 ranH = rand() % 100 +1;
 
-
 cout<< "What difficulty would you like to do? Easy(e), Medium(m), or Hard(h)?" <<endl;
 cin>> diff;
 
 if (diff == 'e' || diff == 'E') {
-cout<< "Guess a number between 1 and 2. You have 1 try!"<<ranE  <<endl;
+cout<< "Guess a number between 1 and 2. You have 1 try!"  <<endl;
 cin>> guess;
     if (guess == ranE) {
     cout<< "You guessed correctly! You win!" <<endl;
@@ -35,11 +32,10 @@ cin>> guess;
     else {
     cout<< "You were off by " << abs (ranE - guess) << "! Sorry, you lose." <<endl;
     } 
-
 }
     
 else if (diff == 'm' || diff == 'M')    {
-cout<< "Guess a number between 1 and 10. You have 2 tries!" <<ranM <<endl;
+cout<< "Guess a number between 1 and 10. You have 2 tries!" <<endl;
 cin>> guess;
     if (guess == ranM)  {
     cout<< "You guessed correctly! You win!" <<endl;
@@ -60,7 +56,7 @@ cin>> guess;
 }
 
 else if (diff == 'h' || diff == 'H') {
-cout<< "Guess a number between 1 and 100. You have 3 tries!" <<ranH <<endl;
+cout<< "Guess a number between 1 and 100. You have 3 tries!" <<endl;
 cin>> guess;
     if (guess == ranH)  {
     cout<< "You guessed correctly! You win!" <<endl;
