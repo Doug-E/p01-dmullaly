@@ -93,7 +93,7 @@ cout<< "That wasn't and option. ";
 cout<< "Would you like to play again? (y/n)" <<endl;
 cin>> play;
 }
-while (play == 'y' || play == 'Y');
+while (play != 'n' && play != 'N');
 
 cout<< "Thanks for playing!" <<endl;
 
